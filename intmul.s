@@ -8,18 +8,19 @@ intmul:
     mov r4, r0 // store multiplicand in r4
     mov r5, r1 // store multiplier in r5
 mulloop:
-    cmp r6, #31
+    cmp r6, #32 // If ran 32 times, return
     beq return
-    and r2, r5, #1
-    cmp r2, #0 // check if multiplier is 0
+    and r2, r5, #1 // and multiplier with 1 to check last bit
+    cmp r2, #0 // check if last bit of multiplier is 0
     beq afterop
+    // add sum and multiplicand
     mov r0, r7
     mov r1, r4
     bl intadd
     mov r7, r0
 afterop:
-    lsl r4, r4, #1
-    lsr r5, r5, #1
+    lsl r4, r4, #1 //shift mcand right
+    lsr r5, r5, #1 //shift mplier left
     // Increment count
     mov r0, r6
     mov r1, #1
