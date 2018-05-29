@@ -1,3 +1,4 @@
-# cpe315-Lab3Real
+# cpe315-lab3
+Lab 3 Starter Code
 
-Levi Thompson
+Modify this file to include your name(s).

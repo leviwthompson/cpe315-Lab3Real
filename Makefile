@@ -5,7 +5,7 @@ SRCFILES=main.s intadd.s intsub.s intmul.s
 all:	intcalc
 
 intcalc: $(SRCFILES) 
-	gcc $(FLAGS) -o intcalc $^ 
+	gcc $(FLAGS) -g -o intcalc $^ 
 
 clean: 
 	rm -f *.o intcalc

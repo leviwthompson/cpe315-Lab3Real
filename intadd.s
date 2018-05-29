@@ -6,19 +6,19 @@
 intadd:
     push {r4, r5, r6, r7, lr} //r4=a, r5=b, r6=cin, r7=sum
 
-    mov r4, r0  // Store a in r4
-    mov r5, r1  // Store b in r5
+    mov r4, r0
+    mov r5, r1
 
     eor r0, r5 // a xor b
     mov r7, r0 // s=a xor b
 loop:
-    and r1, r4, r5 // and current a and b
-    lsl r1, r1, #1 // shift result left
-    cmp r1, #0 // if 0, done
+    and r1, r4, r5
+    lsl r1, r1, #1
+    cmp r1, #0
     beq end
 
-    mov r4, r7 // a = s
-    mov r5, r1 // b = a&b  from above
+    mov r4, r7
+    mov r5, r1
 
     mov r2, r4
     eor r2, r5 // a xor b

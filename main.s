@@ -27,7 +27,7 @@ loop:
       ldr     r0, =scanchar
       mov     r1, sp
       bl      scanf
-      ldr     r6, [sp]        @ r6 holds operation char
+      ldrb     r6, [sp]        @ r6 holds operation char
       mov     r0, r4
       mov     r1, r5
       ldr     r2, =addit
